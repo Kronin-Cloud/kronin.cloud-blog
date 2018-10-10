@@ -6,6 +6,9 @@ You need Ruby and gem before starting:
 
 [Jekyll Latest](https://jekyllrb.com/docs/installation/)
 
+
+[View] (https://blog.kronin.cloud)
+
 When Ruby & Jekyll installed:
 ```bash
 # clone the project via SSH
