@@ -1,5 +1,6 @@
 title: My personal blog - Adam Neilson
 email: your-email@domain.com
+date: <%= Time.now.strftime('%Y-%m-%d %H:%M:%S %z') %>
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -46,4 +47,4 @@ plugins:
   - jekyll-sitemap
 
 include: [_pages]
-exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/"]
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/", "README.md", "Gemfile", "Gemfile.lock"]
