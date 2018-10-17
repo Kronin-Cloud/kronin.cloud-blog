@@ -65,4 +65,13 @@ gulp.task('watch', function () {
 });
 
 //  Default task
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('serve', ['browser-sync', 'watch']);
+
+
+gulp.task('browser-sync', ['jekyll-build'],function () {
+    bs.init({
+        server: {
+            baseDir: "_site"
+        }
+    });
+});

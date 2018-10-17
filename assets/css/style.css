@@ -1,0 +1,50 @@
+
+
+
+.content{
+  width: 100%;
+  background-color: #FAFAFA;
+}
+
+.cont_post{
+  margin: 0 -15px;
+}
+
+.post-card-box li{
+  width: 33.333%;
+  padding: 15px;
+}
+.post-card{
+  background-color: white;
+}
+.post-card .post-card-body{
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+.post-card .post-card-body .tag, .post-card .post-card-body .post-card-title{
+  color: #707070;
+  text-align: center;
+
+}
+
+.post-card .post-card-image{
+  position: relative;
+}
+
+.post-card .post-card-body .tag{
+  margin: 25px auto 20px auto;
+  display: inline-block;
+
+}
+.post-card .post-card-body .post-card-title {
+  margin-bottom: 24px;
+  display: block;
+  text-transform: none;
+  font-family: 'Markazi Text', serif;
+}
+.post-card .post-card-body .post-card-link{
+  display: table;
+  width: 100%;
+}
