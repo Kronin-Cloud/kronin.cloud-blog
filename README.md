@@ -1,38 +1,25 @@
-# Adam Blog is a minimal clear theme for Jekyll
+## Running locally
 
-![Adam Blog - Imac](https://github.com/artemsheludko/adam-blog/blob/master/assets/img/adam-blog-imac.jpg?raw=true)
+You need Ruby and gem before starting:
 
-## Demo
+![Jekyll Version](https://img.shields.io/gem/v/jekyll.svg)
 
-Check the theme in action [Demo](https://artemsheludko.github.io/adam-blog/)
+[Jekyll Latest](https://jekyllrb.com/docs/installation/)
 
-The main page would look like this:
+When Ruby & Jekyll installed:
+```bash
+# clone the project via SSH
+> https://github.com/Kronin-Cloud/kronin.cloud-website.git
 
-![Main page preview](https://github.com/artemsheludko/adam-blog/blob/master/assets/img/adam-home-page.jpg?raw=true)
 
-The post page would look like this:
+# install bundler
+> gem install bundler
 
-![Post page preview](https://github.com/artemsheludko/adam-blog/blob/master/assets/img/adam-post-example.jpg?raw=true)
+# install Gemfile
+> bundler init
+# install dependencies
+> bundle install
 
-## Features
-
-- [Google Fonts](https://fonts.google.com/)
-- [Font Awesome](http://fontawesome.io/)
-- [Disqus](https://disqus.com/)
-- [MailChimp](https://mailchimp.com/)
-- [Analytics](https://analytics.google.com/analytics/web/)
-- [Search](https://github.com/christian-fei/Simple-Jekyll-Search)
-
-## Installation:
-
-Fork the ``master`` branch and delete ``gh-pages`` branch in it. This is important because ``gh-pages`` branch is used here only to host the blog. You should be using the master branch as the source and create a fresh ``gh-pages`` branch.
-
-## License
-
-GNU General Public License v3.0
-
-## Donate
-
-<p>If you want to show your appreciation, buy me one <a href="https://www.buymeacoffee.com/artemsheludko" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a> ! Every five cups of coffee and a new theme for Jekyll is ready 😋</p>
-<p>Either way, your support is a way to thank me ❤️</p>
-<p align="center"><b>Thank you for your support!</b></p>
+# run jekyll with dependencies
+> bundle exec jekyll serve
+```
