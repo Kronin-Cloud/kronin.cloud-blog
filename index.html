@@ -1,173 +1,21 @@
 ---
-layout: default
-onepage: true
-
-
+layout: home-page
 ---
+<ol class="post-card-box clearfix">
+  {% for post in paginator.posts %}
+  <li>
+    <div class="post-card">
+      <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
+      </a>
 
-<div class='full no-padding parallax home-video-wrapper' id="top">
-  <div class='fullscreen'>
-    <video autoplay='autoplay' id='fullscreen-video' loop='loop'>
-      <source src='{{ site.baseurl }}{{ "/assets/video/stock.mp4" | relative_url }}' type='video/mp4'>
-    </video>
-    <div class='overlay'></div>
-    <div class='layer'>
-      <p class="small-title">Make the right choice </p>
-      <h1 class='thin' id="to-be-update">
-         <span class="fir">We listen</span><br/>
-         <span class="sec">We adapt</span><br/>
-         <span class="thir">We implement</span>
-      </h1>
-
-      <!-- <h2 class='thin'>
-       This is wrap, a creative digital company, creating solutions for any visual identity project, espetically for digital experiences and brand identities.
-       {% assign nav_obj = site.data.nav | where:'section_id','works' | first %}
-       <a href='{{ "index.html" | append:nav_obj.path | relative_url }}'>View our works</a> -->
-      </h2>
-    </div>
-  </div>
-</div>
-
-
-<!--about-->
-
-<div id="about" class="full no-overflow no-padding parallax my-about" style="background-image: url({{ "/assets/images/3000x1500.jpg" | relative_url }})">
-  <div class="right-half">
-    <div class="two spacing"></div>
-    <div class="section-header alt white">
-      <h2>About</h2>
-    </div>
-    <p class="light">Kronin Cloud is an experienced and nimble consulting firm focused on cloud solutions.
-    Our team brings decades of experience to help support our customers through their entire cloud journey,
-    from scoping out the best solution during the sales cycle to delivering that solution on-time and on-budget.</p>
-    <p class="light">Whether you are looking for IT Support, installing updates, moving to the cloud or upgrading your IT network.
-    Kronin Cloud will work with you to make sure your IT infrastructure is reliable, secure and running smoothly.
-    Ensuring your team is productive 24x7.</p>
-    <div class="two spacing"></div>
-    <a href="#portfolio" class="button small">Get Started</a>
-    <div class="three spacing"></div>
-  </div>
-</div>
-
-
-<!--portfolio-->
-<section id="portfolio" class="bg-light-gray">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="portfolio-heading">Kubernetes</h2>
-                <!-- <h3 class="portfolio-subheading ">Lorem ipsum dolor sit amet consectetur.</h3> -->
-            </div>
-        </div>
-        <div class="row">
-
-          {% for prt in site.data.portfolio.cont %}
-            <div class="small-4 columns ">
-              <div class="portfolio_block ">
-                <a class="portfolio_close"><i class="fa fa-times" aria-hidden="true"></i></a>
-                <div class="portfolio_center">
-                  <h3 class="portfolio_title">{{ prt.title }}</h3>
-                  <img class="portfolio-img" src="{{ site.baseurl }}{{ prt.img-src }}" alt="{{ prt.alt }}">
-                  <h3 class="portfolio_name">{{ prt.title }}</h3>
-                  <div class="portfolio_hover">
-                    <p class="portfolio_hover_icon">
-                      <i class="fa fa-plus fa-3x"></i>
-                    </p>
-                  </div>
-                  <p class="portfolio_paragraph
-                  {% if prt.list %} portfolio_paragraph-center {% endif %}
-                  ">{{ prt.paragraph }}</p>
-                    {% if prt.list %}
-                  <ul class="portfolio_list">
-                    {% for list in prt.list %}
-                    <li>{{ list.text }}</li>
-                    {% endfor %}
-                  </ul>
-                    {% endif %}
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-
-        </div>
-    </div>
-</section>
-<!--portfolio-->
-
-
-<!--services-->
-<section class="services" id="services">
-  <h2 class="services_title">Services</h2>
-  <!-- <h3 class="services_subtitle ">Lorem ipsum dolor sit amet consectetur.</h3> -->
-  <div class="members">
-      {% for serv in site.data.services.cont %}
-      <div class="small-3 columns">
-        <div class="member-avatar">
-          <span class="services_icon">
-              <img src="{{ site.baseurl }}{{ serv.icon }}" class="services-icon">
-          </span>
-          <h4 class="services_columns_heading">{{ serv.heading }}</h4>
-          <p class="services_columns_text">{{ serv.text }}</p>
-        </div>
+      <div class="post-card-body">
+        {% for tag in post.tags %}
+        <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">|&#32;{{ tag }}</a>
+        {% endfor %}
+        <a href="{{post.url | prepend: site.baseurl}}" class="post-card-link"><h3 class="post-card-title">{{post.title}}</h3></a>
       </div>
-      {% endfor %}
-  </div>
-</section>
-<!--services-->
 
-
-<div class='full dark no-padding '>
-  <div class="four spacing"></div>
-  <div class='row'>
-    <div class='large-8 columns'>
-      <h3 class="white">Customized to meet your needs.</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur inventore minimar.
-      </p>
     </div>
-    <div class='large-4 columns'>
-      <p>
-        <a class='button small boxed' href='#certifications'>More</a>
-      </p>
-    </div>
-  </div>
-  <div class='two spacing'></div>
-</div>
-
-
-
-
-
-
-
-
-<div class='full' id="certifications">
-  <div class='row'>
-    <div class='large-8 columns large-centered'>
-      {% include section-title.html  title="Certifications" %}
-    </div>
-  </div>
-</div>
-<div class="full no-padding">
-  <div class="clients">
-    <div class='row'>
-      {% for client in site.data.certifications.clients %}
-        <div class='large-3 medium-6 small-6 columns'>
-          <div class="client">
-            <a href=""><img class="clients_img" alt="" src="{{ site.baseurl }}{{ client.url  }}" /></a>
-            <h3 class="clients_name">{{ client.name }}</h3>
-          </div>
-
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-  <div class="four spacing"></div>
-</div>
-
-<div class="four spacing"></div>
-<a id='contact'></a>
-{% include contact-form.html %}
-
-{% include social-networks.html %}
-<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </li>
+  {% endfor %}
+</ol>
