@@ -1,0 +1,14 @@
+
+<!-- {% include team.html  %} -->
+
+<div class="full no-padding">
+  <div class='mod modBoxedSlider' data-timeout='1500'>
+    <div class='slides'>
+      {% for image in site.data.slider.team_slides %}
+        <div class='slide'>
+          <img width="1200" height="800" alt="" src="{{ image | relative_url }}" />
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

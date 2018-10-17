@@ -1,0 +1,21 @@
+<div class='full parallax social-networks my-social' style="background-image: url({{ "/assets/images/4000x2670.jpg" | relative_url }})">
+  <div class='two spacing'></div>
+  <div class='row'>
+
+    {% for soc in site.data.social-network.cont %}
+    <div class='medium-3 columns'>
+      <div class='big-social'>
+        <a href='{{ soc.link }}'>
+          <span>
+            <i class='fa {{ soc.icon }}'></i>
+          </span>
+        </a>
+        <h4>{{ soc.social }}</h4>
+      </div>
+      <div class='two spacing'></div>
+    </div>
+    {% endfor %}
+
+  <div class='two spacing'></div>
+</div>
+</div>
