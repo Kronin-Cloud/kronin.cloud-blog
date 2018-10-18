@@ -29,7 +29,7 @@ pinterest: # Add your Pinterest handle
 mailchimp: # Add your MailChimp form identifier.
 
 # Disqus
-discus_identifier: mr-brown # Add your discus identifier
+# discus_identifier: mr-brown # Add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
@@ -48,3 +48,20 @@ plugins:
 
 include: [_pages]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/", "README.md", "Gemfile", "Gemfile.lock"]
+
+
+social:
+  - link: "https://twitter.com/KroninC"
+    icon: "fa-twitter"
+  - link: "https://www.facebook.com/kronin.cloud"
+    icon: "fa-facebook"
+  - link: "https://goo.gl/maps/H3KyCuSwsK42"
+    icon: "fa-google"
+  - link: "https://www.linkedin.com/company/kronin-cloud/"
+    icon: "fa-linkedin"
+  - link: "https://github.com/orgs/Kronin-Cloud"
+    icon: "fa-github"
+  - link: "https://kronincloud.slack.com/"
+    icon: "fa-slack"
+  - link: "https://www.youtube.com/channel/UCtCGskDgeS3M5ArBN1uaBGg"
+    icon: "fa-youtube"

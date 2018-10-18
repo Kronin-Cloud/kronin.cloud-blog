@@ -52,7 +52,24 @@
   display: table;
   width: 100%;
 }
+.page-share a{
+  margin: 15px 10px;
+  display: inline-block;
+}
+.main-nav .search-icon-container{
+  display: table;
+  width: auto;
+  float: right;
 
+}
+.main-header .page-share{
+    display: table;
+    float: left;
+}
+.main-nav .search-icon-container a{
+  display: inline-block;
+  color: #87314e;
+}
 @media only screen and (max-width: 992px) {
 
   .post-card-box li{

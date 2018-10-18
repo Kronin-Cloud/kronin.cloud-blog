@@ -12,11 +12,20 @@
           <li><a href="{{site.baseurl}}/tags">Tags in Blog</a></li>
           <li><a href="{{site.baseurl}}/rss/index.xml">RSS</a></li>
         </ul>
+        <div class="page-share">
+          {% for soc in site.social %}
+            <a href="{{ soc.lonk }}" ><i class="fa {{ soc.icon }}" ></i></a>
+          {% endfor %}
+    
+        </div>
         <div class="search-icon-container">
           <span class="search-icon"><a><i class="fa fa-search" aria-hidden="true"></i></a></span>
         </div>
       </nav>
       <p class="logo"><a href="{{site.baseurl}}/">{{ site.author }}</a></p>
+
+
+
       <div class="search-icon-container">
         <span class="search-icon"><a><i class="fa fa-search" aria-hidden="true"></i></a></span>
       </div>
