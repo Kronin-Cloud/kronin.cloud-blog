@@ -9,7 +9,7 @@ You need Ruby and gem before starting:
 When Ruby & Jekyll installed:
 ```bash
 # clone the project via SSH
-> https://github.com/Kronin-Cloud/kronin.cloud-website.git
+> https://github.com/Kronin-Cloud/kronin.cloud-blog.git
 
 
 # install bundler
