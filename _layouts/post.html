@@ -6,6 +6,7 @@ layout: default
   <article class="article-page">
     <div class="page-image">
       <div class="cover-image" style="background: url({{"/assets/img/" | prepend: site.baseurl | append : page.img}}) center no-repeat; background-size: cover;"></div>
+      
     </div>
     <div class="wrapper">
       <div class="page-content">
@@ -28,7 +29,7 @@ layout: default
             <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
           </div><!-- End Share -->
         </div>
-      
+
         {% include recent-post.html %}
         {% include newsletter.html %}
 
