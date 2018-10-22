@@ -1,47 +1,49 @@
-<!-- JS -->
-<!--<script src="{{site.baseurl}}/assets/js/jquery-3.2.1.min.js"></script>-->
-<!--<script src="{{site.baseurl}}/assets/js/jekyll-search.js"></script>-->
-<script>
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '{{site.baseurl}}/search.json',
-    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-    noResultsText: 'No results found',
-    fuzzy: false,
-    exclude: ['Welcome']
-  });
+
+<script src="{{site.baseurl}}/assets/js/jekyll-search.js" ></script>
+<script >
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{site.baseurl}}/search.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        fuzzy: false,
+        exclude: ['Welcome']
+    });
+
 </script>
-<!--<script src="{{site.baseurl}}/assets/js/main.js"></script>-->
+
 
 
 <script>
 
-    function loadCSS(hf) {
+
         var ms = document.createElement("link");
         ms.rel = "stylesheet";
         ms.href = "https://fonts.googleapis.com/css?family=Lato:300,400,700";
         document.getElementsByTagName("head")[0].appendChild(ms);
-    }
-    function loadCSS(hf) {
+
+
         var ms = document.createElement("link");
         ms.rel = "stylesheet";
         ms.href = "https://fonts.googleapis.com/css?family=Markazi+Text:400,500,600,700";
         document.getElementsByTagName("head")[0].appendChild(ms);
-    }
- function loadCSS(hf) {
+
+
         var ms = document.createElement("link");
         ms.rel = "stylesheet";
         ms.href = "https://fonts.googleapis.com/css?family=Montserrat:300,400,700";
         document.getElementsByTagName("head")[0].appendChild(ms);
-    }
+
+        var ms = document.createElement("link");
+        ms.rel = "stylesheet";
+        ms.href = "{{site.baseurl}}/assets/fonts/font-awesome/css/font-awesome.min.css";
+        document.getElementsByTagName("head")[0].appendChild(ms);
 
 
-</script>
-
-<script>var ms = document.createElement("link");
+    var ms = document.createElement("link");
 ms.rel = "stylesheet";
-ms.href = "assets/css/main.css";
+ms.href = "{{site.baseurl}}/assets/css/main.css";
 document.getElementsByTagName("head")[0].appendChild(ms);
 
 </script>
@@ -49,7 +51,7 @@ document.getElementsByTagName("head")[0].appendChild(ms);
     "scripts": [
 
 {"src": "{{site.baseurl}}/assets/js/jquery-3.2.1.min.js", "async": false},
-{"src": "{{site.baseurl}}/assets/js/jekyll-search.js", "async": false},
+// {"src": "{{site.baseurl}}/assets/js/jekyll-search.js", "async": false},
 {"src": "{{site.baseurl}}/assets/js/main.js", "async": false},
 
 
