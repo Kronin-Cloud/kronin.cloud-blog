@@ -1,5 +1,14 @@
-
+<script src="{{site.baseurl}}/assets/js/jquery-3.2.1.min.js" ></script>
 <script src="{{site.baseurl}}/assets/js/jekyll-search.js" ></script>
+<script src="{{ site.baseurl }}/assets/js/jquery.lazy.min.js" >
+  </script >
+  <script >
+      $('.lazy').lazy({
+          effect: "fadeIn",
+          effectTime: 200,
+          threshold: 0
+      });
+  </script>
 <script >
     SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
@@ -54,7 +63,7 @@ document.getElementsByTagName("head")[0].appendChild(ms);
 <script>var scr = {
     "scripts": [
 
-{"src": "{{site.baseurl}}/assets/js/jquery-3.2.1.min.js", "async": false},
+// {"src": "{{site.baseurl}}/assets/js/jquery-3.2.1.min.js", "async": false},
 // {"src": "{{site.baseurl}}/assets/js/jekyll-search.js", "async": false},
 {"src": "{{site.baseurl}}/assets/js/main.js", "async": false},
 

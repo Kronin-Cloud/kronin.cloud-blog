@@ -6,7 +6,8 @@ layout: home-page
     {% for post in paginator.posts %}
       <li>
         <div class="post-card">
-          <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
+          <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" >
+            <img class="lazy" data-src="{{ "/assets/img/" | prepend: site.baseurl | append : post.img}}" alt="post">
           </a>
 
           <div class="post-card-body">
