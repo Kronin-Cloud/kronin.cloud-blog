@@ -70,6 +70,19 @@
   display: inline-block;
   color: #87314e;
 }
+.v-logo-container{
+  position: absolute;
+  left: 50%;
+  display: table;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+}
+.v-logo-container img{
+  max-width: 145px;
+  width: 100%;
+}
+
 @media only screen and (max-width: 992px) {
 
   .post-card-box li{

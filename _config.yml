@@ -1,4 +1,4 @@
-title: My personal blog - Adam Neilson
+title: Blog Kronin Cloud
 email: your-email@domain.com
 date: <%= Time.now.strftime('%Y-%m-%d %H:%M:%S %z') %>
 description: > # this means to ignore newlines until "baseurl:"
@@ -10,9 +10,9 @@ permalink: ':title/'
 url: "https://blog.kronin.cloud" # the base hostname & protocol for your site, e.g. http://example.com
 name: Kronning
 # Author settings
-author: Kronning # add your name
+logo: /assets/img/Kronin-Logo-Standard.svg # add your name
 author-pic: adam-face.jpg
-about-author: My name is Adam Neilson. I’m a full-time adventure travel blogger and photographer who’s been exploring the world for over 2 years.
+about-author: My name is Krisztian Banhidy. I’m a full-time adventure travel blogger and photographer who’s been exploring the world for over 2 years.
 
 # Contact links
 email: # Add your Email address
