@@ -4,3 +4,17 @@
   </div>
 </footer> <!-- End Footer -->
 <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/f72170e7aaf2931f8e2d84a31/f0ff6f5b3562d2b8363b23fa6.js");</script>
+
+
+{% if site.service_worker %}
+<script async>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').then(function( registration ) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    })
+    .catch(function(error) {
+      console.log('ServiceWorker registration failed: ', error);
+    });
+  }
+</script>
+{% endif %}

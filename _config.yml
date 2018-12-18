@@ -50,6 +50,9 @@ include: [_pages]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/", "README.md", "Gemfile", "Gemfile.lock"]
 
 
+
+service_worker: true
+
 social:
   - link: "https://twitter.com/KroninC"
     icon: "fa-twitter"
