@@ -62,7 +62,7 @@ gulp.task('sw', function() {
   const distDir = './_site';
 
   sw.write(`${rootDir}/sw.js`, {
-    staticFileGlobs: [distDir + '/**/*.{js,html,css,png,jpg,svg}'],
+    staticFileGlobs: [distDir + '/**/*.{js,html,css,png,jpg,svg,eot,ttf,woff,woff2}'],
     stripPrefix: distDir
   });
 });
