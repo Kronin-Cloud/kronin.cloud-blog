@@ -22,4 +22,22 @@ When Ruby & Jekyll installed:
 
 # run jekyll with dependencies
 > bundle exec jekyll serve
+
+
+
+# install npm
+> sudo apt-get install npm
+
+# install gulp
+> npm install gulp -D
+
+# install gulp cli
+> npm install gulp-cli -g
+
+# install Node Modules
+> npm install
+
+# jekyll serve
+> gulp serve
+
 ```
