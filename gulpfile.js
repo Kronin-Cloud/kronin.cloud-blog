@@ -6,7 +6,7 @@ var pngquant = require('imagemin-pngquant');
 var cache = require('gulp-cache');
 var cp = require('child_process');
 var browserSync = require('browser-sync');
-
+const sw = require('sw-precache');
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
 // Build the Jekyll Site
@@ -21,7 +21,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 });
 
 // Wait for jekyll-build, then launch the Server
-gulp.task('browser-sync', ['sass', 'img', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'img', 'sw', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -56,6 +56,17 @@ gulp.task('img', function() {
     .pipe(browserSync.reload({stream:true}));
 });
 
+
+gulp.task('sw', function() {
+  const rootDir ='./';
+  const distDir = './_site';
+
+  sw.write(`${rootDir}/sw.js`, {
+    staticFileGlobs: [distDir + '/**/*.{js,html,css,png,jpg,svg}'],
+    stripPrefix: distDir
+  });
+});
+
 // Watch scss, html, img files
 gulp.task('watch', function () {
     gulp.watch('assets/css/sass/**/*.scss', ['sass']);
@@ -65,11 +76,11 @@ gulp.task('watch', function () {
 });
 
 //  Default task
-gulp.task('serve', ['browser-sync', 'watch']);
+gulp.task('serve', ['browser-sync', 'watch', 'sw']);
 
 
 gulp.task('browser-sync', ['jekyll-build'],function () {
-    bs.init({
+    browserSync.init({
         server: {
             baseDir: "_site"
         }
